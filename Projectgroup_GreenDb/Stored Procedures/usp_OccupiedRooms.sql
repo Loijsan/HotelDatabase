@@ -5,5 +5,3 @@ FROM Bookings
 INNER JOIN BookingSpecifications ON Bookings.Id = BookingSpecifications.BookingId
 WHERE Bookings.RoomId = @Roomnr
 GO
-
---Louise

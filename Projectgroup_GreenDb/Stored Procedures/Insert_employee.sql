@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE InsertEmployee @FullName nvarchar(30), @Salary MONEY, @PosistionsID int
+﻿CREATE PROCEDURE InsertEmployee @FullName nvarchar(30), @Salary MONEY, @PositionId int
 AS
-INSERT INTO Employees
-VALUES (@FullName, @Salary, @PosistionsID)
+    INSERT INTO Employees
+    VALUES (@FullName, @Salary, @PositionId)
+GO

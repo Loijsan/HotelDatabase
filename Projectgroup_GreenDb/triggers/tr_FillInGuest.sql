@@ -14,5 +14,3 @@ BEGIN
 	SET RoomGuest = (SELECT FullName FROM Customers WHERE Id = @Id)
 	WHERE CustomerId = @Id AND RoomId = @Rooms
 END
-
---Louise

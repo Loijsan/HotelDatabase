@@ -5,5 +5,3 @@ FROM Bookings
 INNER JOIN BookingSpecifications ON Bookings.Id = BookingSpecifications.BookingId
 WHERE CheckInDate BETWEEN @CheckInDate AND @CheckOutDate
 GO
-
---Louise

@@ -92,12 +92,10 @@
     <Build Include="views\CustomerBookingInfo.sql" />
     <Build Include="views\CustomerOverView.sql" />
     <Build Include="views\EmployeePositions.sql" />
-    <None Include="triggers\tr_SalaryChange.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="obj\Debug\Projectgroup_GreenDb.sqlprojAssemblyReference.cache" />
     <None Include="Projectgroup_GreenDb.sqlproj.user" />
-    <None Include="Projectgroup_GreenDb_1.publish.xml" />
     <None Include="Projectgroup_GreenDb.publish.xml" />
   </ItemGroup>
   <ItemGroup>
