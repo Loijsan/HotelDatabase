@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Projectgroup_GreenDb</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{da75b286-55dd-4333-b4a4-e6a112947b0e}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Projectgroup_GreenDb</RootNamespace>
+    <AssemblyName>Projectgroup_GreenDb</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="Stored Procedures" />
+    <Folder Include="bin" />
+    <Folder Include="bin\Debug" />
+    <Folder Include="obj" />
+    <Folder Include="obj\Debug" />
+    <Folder Include="PostDeployScripts" />
+    <Folder Include="triggers" />
+    <Folder Include="views" />
+    <Folder Include="transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Bookings.sql" />
+    <Build Include="dbo\Tables\BookingSpecifications.sql" />
+    <Build Include="dbo\Tables\Customers.sql" />
+    <Build Include="dbo\Tables\Dialouges.sql" />
+    <Build Include="dbo\Tables\Employees.sql" />
+    <Build Include="dbo\Tables\ExtraServiceOptions.sql" />
+    <Build Include="dbo\Tables\Feedbacks.sql" />
+    <Build Include="dbo\Tables\PaymentOptions.sql" />
+    <Build Include="dbo\Tables\Payments.sql" />
+    <Build Include="dbo\Tables\Positions.sql" />
+    <Build Include="dbo\Tables\Rooms.sql" />
+    <Build Include="dbo\Tables\StayingGuests.sql" />
+    <PostDeploy Include="PostDeployScripts\Script.PostDeploymentFillData.sql" />
+    <Build Include="dbo\Tables\RoomTypes.sql" />
+    <Build Include="dbo\Tables\TotalBookingSums.sql" />
+    <Build Include="Stored Procedures\Insert_employee.sql" />
+    <Build Include="Stored Procedures\usp_OccupiedDates.sql" />
+    <Build Include="Stored Procedures\usp_OccupiedRooms.sql" />
+    <Build Include="triggers\tr_FillInGuest.sql" />
+    <Build Include="views\BookingOverWiev.sql" />
+    <Build Include="views\CustomerBookingInfo.sql" />
+    <Build Include="views\CustomerOverView.sql" />
+    <Build Include="views\EmployeePositions.sql" />
+    <None Include="triggers\tr_SalaryChange.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\Projectgroup_GreenDb.sqlprojAssemblyReference.cache" />
+    <None Include="Projectgroup_GreenDb.sqlproj.user" />
+    <None Include="Projectgroup_GreenDb_1.publish.xml" />
+    <None Include="Projectgroup_GreenDb.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Projectgroup_GreenDb.refactorlog" />
+  </ItemGroup>
+</Project>
