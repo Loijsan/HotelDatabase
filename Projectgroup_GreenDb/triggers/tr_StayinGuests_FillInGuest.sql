@@ -1,4 +1,4 @@
-﻿CREATE TRIGGER [tr_FillInGuest]
+﻿CREATE TRIGGER [tr_StayingGuests_FillInGuest]
 	ON [dbo].[StayingGuests]
 	AFTER INSERT
 	AS
