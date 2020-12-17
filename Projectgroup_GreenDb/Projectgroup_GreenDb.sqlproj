@@ -84,14 +84,14 @@
     <PostDeploy Include="PostDeployScripts\Script.PostDeploymentFillData.sql" />
     <Build Include="dbo\Tables\RoomTypes.sql" />
     <Build Include="dbo\Tables\TotalBookingSums.sql" />
-    <Build Include="Stored Procedures\Insert_employee.sql" />
     <Build Include="Stored Procedures\usp_OccupiedDates.sql" />
     <Build Include="Stored Procedures\usp_OccupiedRooms.sql" />
-    <Build Include="triggers\tr_FillInGuest.sql" />
     <Build Include="views\BookingOverWiev.sql" />
     <Build Include="views\CustomerBookingInfo.sql" />
     <Build Include="views\CustomerOverView.sql" />
     <Build Include="views\EmployeePositions.sql" />
+    <Build Include="Stored Procedures\usp_Insert_employee.sql" />
+    <Build Include="triggers\tr_StayinGuests_FillInGuest.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="obj\Debug\Projectgroup_GreenDb.sqlprojAssemblyReference.cache" />
